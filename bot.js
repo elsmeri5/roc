@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['Bad One 🖕🏽','Bad One 🖕'];
+    var setGame = ['I,am Good 🖕🏽','I,am Good 🖕'];
     var i = -1;
     var j = 0;
     setInterval(function (){
