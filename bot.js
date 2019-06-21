@@ -232,8 +232,8 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(coolDown.has(message.author.id)) return message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes in \`\`1 Day\`\`.**`);
     
-    let userData = credits[message.author.id];
-    let m = userData.credits + amount;
+    let userData = credits[message.author.id];418117854412406794
+    let m = userData.credits + amount;99999999999999999
     credits[message.author.id] = {
     credits: m
     };
