@@ -98,7 +98,7 @@ ${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت
 **
 ${prefix}move @user /  لسحب الشخص الى روومك
 ${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر
-${prefix}bk / رسالة جماعيه مع
+${prefix}bk/ رسالة جماعيه مع
 ${prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده
 ${prefix}role @user <rank> / لأعطاء رتبة لعضو معين
 ${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين
@@ -296,7 +296,7 @@ client.on('message', function(msg) {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO 3bker Community ©`` ')
+            .setTitle('``INFO Abdelrhman Community ©`` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -306,7 +306,7 @@ client.on('message', function(msg) {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ ! ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By | 3bker')
+			      .setFooter('By | Abdelrhman')
     })
 }
 });
@@ -393,7 +393,7 @@ client.on('message', message => {
             message.channel.send({embed: {
                 color: 3447003,
                 author: {
-                  name: '3bker Community ©\'s translator',
+                  name: 'Abdelrhman Community ©\'s translator',
                   icon_url: client.user.avatarURL
                 },
                 fields: [{
@@ -404,7 +404,7 @@ client.on('message', message => {
                 timestamp: new Date(),
                 footer: {
                   icon_url: client.user.avatarURL,
-                  text: "3bker Community ©"
+                  text: "Abdelrhman Community ©"
                 }
             }}
             )
@@ -743,7 +743,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : 3bker")
+     .setFooter("By : Abdelrhman")
                                                 
 
 message.channel.send(embed);
@@ -788,7 +788,7 @@ if(message.content.startsWith('abc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "3bker Community ©";
+let copy = "Abdelrhman Community ©";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -834,7 +834,7 @@ let BcList = new Discord.RichEmbed()
 .setDescription(`برودكاست بـ امبد ??\nبرودكاست بدون امبد? \nلديك دقيقه للأختيار قبل الغاء البرودكاست`)
 if (!args) return message.reply('**يجب عليك كتابة كلمة او ??ملة لإرسال البرودكاست**');message.channel.send(BcList).then(msg => {
 msg.react('??')
-.then(() => msg.react('?'))
+.then(() => msg.react(':heavy_check_mark:'))
 .then(() =>msg.react('??'))
  
 let EmbedBcFilter = (reaction, user) => reaction.emoji.name === '??' && user.id === message.author.id;
