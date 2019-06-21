@@ -34,6 +34,7 @@ var ti={}
 ,attentions={};
 
 client.on('ready', function(){
+    var ms = 60000 ;
     var setGame = ['Bad One 🖕🏽'];
     var i = -1;
     var j = 0;
