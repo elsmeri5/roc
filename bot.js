@@ -835,7 +835,7 @@ let BcList = new Discord.RichEmbed()
 if (!args) return message.reply('**يجب عليك كتابة كلمة او ??ملة لإرسال البرودكاست**');message.channel.send(BcList).then(msg => {
 msg.react('??')
 .then(() => msg.react(':heavy_check_mark:'))
-.then(() =>msg.react('??'))
+.then(() =>msg.react(':smiley:'))
  
 let EmbedBcFilter = (reaction, user) => reaction.emoji.name === '??' && user.id === message.author.id;
 let NormalBcFilter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
