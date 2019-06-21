@@ -208,11 +208,11 @@ client.on('message',async message => {
     
 if(message.author.bot) return;
 if(!credits[message.author.id]) credits[message.author.id] = {
-    credits: 50
+    credits: 99999999999999999999999
 };
 
 let userData = credits[message.author.id];
-let m = userData.credits;418117854412406794
+let m = userData.credits;
 
 fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
