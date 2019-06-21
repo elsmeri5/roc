@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['#help','Coded By Abdelrhman Elsmeri','Discord Support Server'];
+    var setGame = ['#help for commands','Coded By Abdelrhman Elsmeri','Discord Support Server'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -46,7 +46,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`https://discord.gg/cyDKEQ3`);
+        client.user.setGame(setGame[i],`https://www.twitch.tv/saleh_zarora`);
     }, ms);
     console.log(` ????????? |> Name: ${client.user.username}`);
  console.log(` ????????? |> Servers: ${client.guilds.size}`);
@@ -60,13 +60,14 @@ client.on('ready', function(){
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// Code Send The Help In DMS // Code By Abdelrhman Elsmeri
     let pages = [`**
-        ***__General orders__***
+        ***__General commands - اوامر عامة__***
 **
 ${prefix}allbots/لعرض جميع البوتات الي بالسيرفر
 ${prefix}server/يعرض لك معلومات عن السيرفر
 ${prefix}bot/يعرض لك كل معلومات البوت
 ${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
 ${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 
+${prefix}ping/ يعرض لك بينجك و بين البوت
 ${prefix}invinfo <invitelink here> / لمعلومات عن الدعوه
  مثال : invinfo m82n8P
 ${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 
@@ -94,7 +95,7 @@ ${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت
 **
   `
 ,`
-        ***__Administrative Orders__***
+        ***__Administrative Commands - اوامر إدارية__***
 **
 ${prefix}move @user /  لسحب الشخص الى روومك
 ${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر
@@ -126,7 +127,7 @@ ${prefix}color <number> / لختيار لون
 ${prefix}deletecolors <number> / لحذف الالوان
 **
    `,`
-        ***__Music orders__***
+        ***__Music Commands - اوامر الاغاني__***
 **
 ${prefix}play / لتشغيل أغنية برآبط أو بأسم
 ${prefix}skip / لتجآوز الأغنية الحآلية
@@ -137,7 +138,7 @@ ${prefix}stop / لإخرآج البوت من الروم
 ${prefix}np / لمعرفة الأغنية المشغلة حآليا
 ${prefix}queue / لمعرفة قآئمة التشغيل
 **
-        ***__Games orders__***
+        ***__Games Commands - اوامر الالعاب__***
  **       
 ${prefix}rps / حجر ورقة مقص
 ${prefix}speed / اسرع كتابة
@@ -2104,7 +2105,7 @@ message.channel.sendEmbed(sh);
 });
 client.on('message', message => {
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('G.ping')) {
+                        if (message.content.startsWith('#ping')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
