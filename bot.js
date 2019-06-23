@@ -1297,7 +1297,7 @@ if(bz.content.startsWith(prefix + 'make')) {
        });
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '$color'){
+   if(message.content.split(' ')[0] == '*color'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**There's No Color With This Number ** :x: `)
@@ -1435,7 +1435,7 @@ if (message.content.startsWith(prefix + 'points')) {
   })
 });
 client.on('message', message => {
-    if(message.content == '$vip-servers') {
+    if(message.content == '*vip-servers') {
              if(!message.author.id === '418117854412406794') return;
     var gimg;
     var gname;
@@ -1467,7 +1467,7 @@ client.on('message', message => {
     if (!points[message.author.id]) points[message.author.id] = { 
         points: 0,
       };
-    if (message.content == "$ايموجى") { 
+    if (message.content == "*ايموجى") { 
         if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
     
     const type = require('./emojis.json'); 
